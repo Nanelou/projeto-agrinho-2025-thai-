@@ -1,10 +1,14 @@
+/* Importa a fonte Roboto do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /* Estilos Gerais */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif; /* Usando Roboto como fonte principal */
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.8; /* Aumenta o espaçamento entre linhas para melhor leitura */
     color: #333; /* Cor de texto padrão */
     background-color: #F0F8F0; /* Um verde bem clarinho para o fundo */
+    font-size: 1.1rem; /* Tamanho da fonte base para o corpo do texto */
 }
 
 /* Centraliza o conteúdo principal na página */
@@ -18,25 +22,25 @@ body {
 header {
     background-color: #228B22; /* Verde floresta */
     color: #fff;
-    padding: 1rem 0;
+    padding: 1.5rem 0; /* Aumenta o padding para mais espaço */
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 3rem; /* Título maior */
     color: #90EE90; /* Verde claro para o título */
 }
 
 header p {
-    font-size: 1.1rem;
+    font-size: 1.3rem; /* Parágrafo no cabeçalho maior */
     color: #D3FFD3; /* Um verde ainda mais claro para o parágrafo */
 }
 
 /* Seções da página */
 section {
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 25px; /* Aumenta o padding das seções */
+    margin-bottom: 25px; /* Aumenta o espaçamento entre as seções */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -45,8 +49,16 @@ section {
 section h2 {
     color: #3CB371; /* Verde menta para os títulos das seções */
     border-bottom: 2px solid #66CDAA; /* Verde água-marinha para a linha abaixo do título */
-    padding-bottom: 10px;
-    margin-bottom: 15px;
+    padding-bottom: 12px; /* Mais espaço abaixo do título */
+    margin-bottom: 20px; /* Mais espaço abaixo do título para o texto */
+    font-size: 2rem; /* Títulos de seção maiores */
+}
+
+/* Parágrafos dentro das seções */
+section p {
+    font-size: 1.1rem; /* Garante que os parágrafos dentro das seções tenham um bom tamanho */
+    margin-bottom: 15px; /* Adiciona um pouco de espaço abaixo dos parágrafos */
+    text-align: justify; /* **TEXTO JUSTIFICADO** */
 }
 
 /* Listas */
@@ -56,9 +68,11 @@ ul {
 }
 
 ul li {
-    margin-bottom: 10px;
-    padding-left: 25px;
+    margin-bottom: 12px; /* Aumenta o espaçamento entre os itens da lista */
+    padding-left: 30px; /* Aumenta o padding para o ícone */
     position: relative;
+    font-size: 1.1rem; /* Itens da lista com fonte maior */
+    text-align: justify; /* **TEXTO JUSTIFICADO** */
 }
 
 ul li:before {
@@ -66,24 +80,25 @@ ul li:before {
     position: absolute;
     left: 0;
     color: #54C571; /* Verde esmeralda para o ícone */
+    font-size: 1.2rem; /* Aumenta o tamanho do ícone */
 }
 
 /* Galeria de Imagens */
 .gallery {
-    display: flex; /* Usa Flexbox para dispor as imagens */
-    flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha */
-    gap: 20px; /* Espaço entre as imagens */
-    justify-content: center; /* Centraliza as imagens horizontalmente */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
     margin-top: 30px;
 }
 
 .gallery img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do seu contêiner */
-    width: 300px; /* Tamanho fixo para as imagens, ou pode usar porcentagem (ex: 48%) para mais flexibilidade */
+    max-width: 100%;
+    width: 300px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer, cortando se necessário */
+    object-fit: cover;
 }
 
 /* Rodapé */
@@ -91,29 +106,45 @@ footer {
     background-color: #2E8B57; /* Verde mar */
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
-    margin-top: 20px;
-    font-size: 0.9rem;
+    padding: 1.2rem 0; /* Aumenta o padding do rodapé */
+    margin-top: 30px; /* Mais espaço acima do rodapé */
+    font-size: 1rem; /* Texto do rodapé maior */
 }
 
 footer p {
-    margin: 5px 0;
+    margin: 7px 0; /* Mais espaço entre os parágrafos do rodapé */
     color: #E0FFE0; /* Um verde bem clarinho para o texto do rodapé */
 }
 
 /* Estilos para links */
 a {
     color: #006400; /* Verde escuro para links */
-    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse sobre o link */
+    text-decoration: underline;
 }
 
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
+    body {
+        font-size: 1rem; /* Reduz a fonte base em telas menores para melhor adaptação */
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1.1rem;
+    }
+
+    section h2 {
+        font-size: 1.7rem;
+    }
+
     .gallery img {
-        width: 100%; /* Em telas menores, imagens ocupam 100% da largura disponível */
+        width: 100%;
     }
 }
